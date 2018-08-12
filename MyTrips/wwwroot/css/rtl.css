@@ -1,0 +1,35 @@
+﻿body {
+    direction: rtl;
+}
+
+.navbar-header {
+    float: right !important;
+}
+
+
+
+.navbar-nav {
+    float: right !important;
+}
+
+#lang-bar {
+    float: left !important;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    .navbar-header {
+        min-width:100%;
+        margin-left:15px !important;
+    }
+
+    .navbar-brand {
+        float: right;
+    }
+
+    .navbar-toggle {
+        float: left;
+        margin-left:-15px;
+        margin-right:15px;
+    }
+}
