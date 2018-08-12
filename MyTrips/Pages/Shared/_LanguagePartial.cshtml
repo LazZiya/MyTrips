@@ -1,0 +1,39 @@
+﻿@using System.Globalization;
+@using Microsoft.AspNetCore.Builder;
+@using Microsoft.Extensions.Options
+
+@inject IOptions<RequestLocalizationOptions> LocOps
+
+@{
+    var requestCulture = CultureInfo.CurrentCulture;
+    var supportedCultures = LocOps.Value.SupportedUICultures
+        .Select(c => new SelectListItem
+        {
+            Value = c.TwoLetterISOLanguageName,
+            Text = $"{c.DisplayName} ({c.NativeName})"
+        }).ToList();
+}
+
+<ul class="nav navbar-nav navbar-right">
+    <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            @($"{requestCulture.DisplayName} ({requestCulture.NativeName})")
+            <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+            @foreach (var culture in supportedCultures)
+            {
+                if (culture.Value.ToLower() != requestCulture.Name.ToLower())
+                {
+                    <li>
+                        <a
+                           asp-route-culture="@culture.Value"
+                           asp-route-returnUrl="@(Context.Request.Query["returnUrl"])">
+                            @culture.Text
+                        </a>
+                    </li>
+                }
+            }
+        </ul>
+    </li>
+</ul>

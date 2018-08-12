@@ -1,0 +1,18 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+@{ 
+    var culture = System.Globalization.CultureInfo.CurrentCulture.Name;
+}
+
+<div class="row">
+    <div class="col-md-3">
+        <h2>Samples</h2>
+        <ul>
+            <li><a asp-page="Trips" asp-route-culture="@culture">My Trips</a></li>
+        </ul>
+    </div>
+</div>

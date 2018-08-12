@@ -1,0 +1,35 @@
+﻿@page
+
+@model MyTrips.Pages.TripsModel
+@{
+    ViewData["Title"] = Localizer.Text("Trips");
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form method="post">
+    <p>@Localizer.Text("Please fill below your travel info:")</p>
+    <div asp-validation-summary="All" class="alert-danger"></div>
+    <div class="form-group">
+        <label asp-for="MyTrip.Destination"></label>
+        <input asp-for="MyTrip.Destination" class="form-control" />
+        <span asp-validation-for="MyTrip.Destination" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="MyTrip.TravelDate"></label>
+        <input asp-for="MyTrip.TravelDate" class="form-control" />
+        <span asp-validation-for="MyTrip.TravelDate" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="MyTrip.TicketPrice"></label>
+        <input asp-for="MyTrip.TicketPrice" class="form-control" />
+        <span asp-validation-for="MyTrip.TicketPrice" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">@Localizer.Text("Submit")</button>
+</form>
+
+@section Scripts{ 
+    <partial name="_ValidationScriptsPartial" />
+}
