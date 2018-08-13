@@ -42,7 +42,8 @@ namespace MyTrips.Utilities
                 ops.SupportedUICultures = cultures.OrderBy(x => x.EnglishName).ToList();
 
                 // add RouteValueRequestCultureProvider to the beginning of the providers list. 
-                ops.RequestCultureProviders.Insert(0, new RouteValueRequestCultureProvider(cultures));
+                ops.RequestCultureProviders.Insert(0, 
+                    new RouteValueRequestCultureProvider(cultures));
             });
         }
     }
