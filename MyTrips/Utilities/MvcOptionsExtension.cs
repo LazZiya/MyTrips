@@ -7,6 +7,13 @@ namespace MyTrips.Utilities
 {
     public static class MvcOptionsExtension
     {
+        /// <summary>
+        /// localize ModelBinding messages, e.g. when user enters string value instead of number...
+        /// these messages can't be localized like data attributes
+        /// </summary>
+        /// <param name="mvc"></param>
+        /// <param name="services"></param>
+        /// <returns></returns>
         public static IMvcBuilder AddModelBindingMessagesLocalizer
             (this IMvcBuilder mvc, IServiceCollection services)
         {

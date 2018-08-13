@@ -1,34 +1,82 @@
 ﻿@page
 
 @model MyTrips.Pages.TripsModel
+
 @{
     ViewData["Title"] = Localizer.Text("Trips");
+    var cultureInfo = System.Globalization.CultureInfo.CurrentCulture;
 }
 
-<h2>@ViewData["Title"]</h2>
 
-<form method="post">
-    <p>@Localizer.Text("Please fill below your travel info:")</p>
-    <div asp-validation-summary="All" class="alert-danger"></div>
-    <div class="form-group">
-        <label asp-for="MyTrip.Destination"></label>
-        <input asp-for="MyTrip.Destination" class="form-control" />
-        <span asp-validation-for="MyTrip.Destination" class="text-danger"></span>
-    </div>
+<div class="row">
+    <div class="col-md-6">
+        <h2>@ViewData["Title"]</h2>
+        <form method="post">
+            <p>@Localizer.Text("Please fill below your travel info:")</p>
+            <div asp-validation-summary="All" class="alert-danger"></div>
+            <div class="form-group">
+                <label asp-for="MyTrip.Destination"></label>
+                <input asp-for="MyTrip.Destination" class="form-control" />
+                <span asp-validation-for="MyTrip.Destination" class="text-danger"></span>
+            </div>
 
-    <div class="form-group">
-        <label asp-for="MyTrip.TravelDate"></label>
-        <input asp-for="MyTrip.TravelDate" class="form-control" />
-        <span asp-validation-for="MyTrip.TravelDate" class="text-danger"></span>
-    </div>
+            <div class="form-group">
+                <label asp-for="MyTrip.TravelDate"></label>
+                <input asp-for="MyTrip.TravelDate" class="form-control" />
+                <span asp-validation-for="MyTrip.TravelDate" class="text-danger"></span>
+            </div>
 
-    <div class="form-group">
-        <label asp-for="MyTrip.TicketPrice"></label>
-        <input asp-for="MyTrip.TicketPrice" class="form-control" />
-        <span asp-validation-for="MyTrip.TicketPrice" class="text-danger"></span>
+            <div class="form-group">
+                <label asp-for="MyTrip.TicketPrice"></label>
+                <input asp-for="MyTrip.TicketPrice" class="form-control" />
+                <span asp-validation-for="MyTrip.TicketPrice" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">@Localizer.Text("Submit")</button>
+        </form>
     </div>
-    <button type="submit" class="btn btn-primary">@Localizer.Text("Submit")</button>
-</form>
+    <div class="col-md-6" dir="ltr">
+        <h3>Culture Info</h3>
+        <table class="table table-striped">
+            <tr>
+                <td>Name</td>
+                <td>: @cultureInfo.Name</td>
+            </tr>
+            <tr>
+                <td>English Name</td>
+                <td>: @cultureInfo.EnglishName</td>
+            </tr>
+            <tr>
+                <td>Native Name</td>
+                <td>: @cultureInfo.NativeName</td>
+            </tr>
+            <tr>
+                <td>Calendar</td>
+                <td>: @cultureInfo.DateTimeFormat.Calendar</td>
+            </tr>
+            <tr>
+                <td>DateTime</td>
+                <td>: @DateTime.Now</td>
+            </tr>
+            <tr>
+                <td>Decimal Number</td>
+                <td>: @((9419.79).ToString("N"))</td>
+            </tr>
+            <tr>
+                <td>Digits</td>
+                <td>: @string.Join("", cultureInfo.NumberFormat.NativeDigits)</td>
+            </tr>
+            <tr>
+                <td>Currency Symbol</td>
+                <td>: @cultureInfo.NumberFormat.CurrencySymbol</td>
+            </tr>
+            <tr>
+                <td>Text Direction</td>
+                <td>: @(cultureInfo.TextInfo.IsRightToLeft?"RTL":"LTR")</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
 
 @section Scripts{ 
     <partial name="_ValidationScriptsPartial" />

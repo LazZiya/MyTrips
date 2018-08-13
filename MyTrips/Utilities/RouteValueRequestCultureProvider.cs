@@ -15,6 +15,11 @@ namespace MyTrips.Utilities
             _cultures = cultures;
         }
 
+        /// <summary>
+        /// get {culture} route value from path string, 
+        /// </summary>
+        /// <param name="httpContext"></param>
+        /// <returns>ProviderCultureResult depends on path {culture} route parameter, or default culture</returns>
         public Task<ProviderCultureResult> DetermineProviderCultureResult(HttpContext httpContext)
         {
             var defaultCulture = "en";
@@ -32,9 +37,7 @@ namespace MyTrips.Utilities
                 return Task.FromResult(new ProviderCultureResult(defaultCulture));
             }
 
-            if (!_cultures.Any(x =>
-                 x.TwoLetterISOLanguageName.ToLower() == routeValues[1].ToLower() ||
-                 x.Name.ToLower() == routeValues[1].ToLower()))
+            if (!_cultures.Any(x => x.Name.ToLower() == routeValues[1].ToLower()))
             {
                 return Task.FromResult(new ProviderCultureResult(defaultCulture));
             }

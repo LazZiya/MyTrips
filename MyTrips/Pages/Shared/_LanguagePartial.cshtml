@@ -9,15 +9,15 @@
     var supportedCultures = LocOps.Value.SupportedUICultures
         .Select(c => new SelectListItem
         {
-            Value = c.TwoLetterISOLanguageName,
-            Text = $"{c.DisplayName} ({c.NativeName})"
+            Value = c.Name,
+            Text = $"{c.DisplayName}"
         }).ToList();
 }
 
 <ul class="nav navbar-nav" id="lang-bar">
     <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-            @($"{requestCulture.DisplayName} ({requestCulture.NativeName})")
+            @($"{requestCulture.DisplayName}")
             <span class="caret"></span>
         </a>
         <ul class="dropdown-menu">

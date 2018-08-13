@@ -2,6 +2,9 @@
 
 namespace MyTrips.Utilities
 {
+    /// <summary>
+    /// Configure {culture?} as first route parameter in the request path
+    /// </summary>
     public class CultureTemplateRouteModelConvention : IPageRouteModelConvention
     {
         public void Apply(PageRouteModel model)
