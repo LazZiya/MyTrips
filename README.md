@@ -26,14 +26,14 @@ Cuurently the project supports 7 languages
 * Spanish
 * Turkish
 
-To add more langauges edit these files :
+#### Add new culture :
 
-* Project root --> /Utilities/LocalizationExtension.cs
-** add new line to cultures list: new CultureInfo("xx");
+* add new CultureInfo("xx") cultures list under /Utilities/LocalizationExtension.cs
 * add new resource files for new culture :
-** Project root --> /Resources/MyDataAnnotations.xx.resx
-** Project root --> /Resources/ViewResource.xx.resx
 
+#### Add new culture resource files
+* Project root --> /Resources/MyDataAnnotations.xx.resx
+* Project root --> /Resources/ViewResource.xx.resx
 
 ## Built With
 
@@ -43,6 +43,12 @@ To add more langauges edit these files :
 * [Globalize](https://github.com/globalizejs/globalize) - For client side validation of numbers and dates
 * [jquery-validation-globalize](https://github.com/johnnyreilly/jquery-validation-globalize) - Enabling simple internationalized validation
 * [cldr-json data](https://github.com/unicode-cldr/cldr-json#cldr-json) - Localized data for all cultures, required for client side valdiation
+
+## Demo Project :
+* [MyTrips](http://aspnetcore.ziyad.info/en/trips) - http://aspnetcore.ziyad.info/en/trips
+
+## Step by step tutorial:
+* [Developing Multicultural Web Application Using ASP.NET Core 2.1](http://ziyad.info/en/articles/10-Building_Multicultural_Web_Application_AspNet_Core_2_1)
 
 ## Authors
 
