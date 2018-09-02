@@ -26,8 +26,7 @@ These instructions will get you a copy of the project up and running on your loc
 ##### Add new culture :
 
 * Edit /Utilities/LocalizationExtension.cs --> add new CultureInfo("xx"); to cultures list 
-* Create two resource files:
-- /Resources/MyDataAnnotations.xx.resx
+* Create related resource files:
 - /Resources/ViewResource.xx.resx
 
 ## Built With
