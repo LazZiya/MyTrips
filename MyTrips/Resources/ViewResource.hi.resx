@@ -132,4 +132,34 @@
   <data name="Submit" xml:space="preserve">
     <value>जमा करें</value>
   </data>
+  <data name="'{0}' must be a number" xml:space="preserve">
+    <value>'{0}' एक संख्या होना चाहिए</value>
+  </data>
+  <data name="Please enter value for {0}" xml:space="preserve">
+    <value>कृपया {0} के लिए मान दर्ज करें</value>
+  </data>
+  <data name="'{0}' is not valid value for '{1}' field" xml:space="preserve">
+    <value>'{0}' '{1}' फ़ील्ड के लिए मान्य मान नहीं है</value>
+  </data>
+  <data name="Ticket price" xml:space="preserve">
+    <value>टिकट की कीमत</value>
+  </data>
+  <data name="The provided value is invalid" xml:space="preserve">
+    <value>प्रदान किया गया मान अमान्य है</value>
+  </data>
+  <data name="Please enter numbers only" xml:space="preserve">
+    <value>कृपया केवल संख्याएँ दर्ज करें</value>
+  </data>
+  <data name="'{0}' must be between [{1} - {2}]" xml:space="preserve">
+    <value>'{0}' के बीच होना चाहिए [{1} - {2}]</value>
+  </data>
+  <data name="'{0}' must be at least {1} and maximum {2} characters" xml:space="preserve">
+    <value>'{0}' कम से कम {1} और अधिकतम {2} वर्ण होना चाहिए</value>
+  </data>
+  <data name="Travel date" xml:space="preserve">
+    <value>यात्रा की तारीख</value>
+  </data>
+  <data name="Destination" xml:space="preserve">
+    <value>गंतव्य</value>
+  </data>
 </root>

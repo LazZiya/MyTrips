@@ -19,16 +19,16 @@ namespace MyTrips.Utilities
         {
             return mvc.AddMvcOptions(o =>
             {
-                var type = typeof(MyDataAnnotations);
+                var type = typeof(ViewResource);
                 var assemblyName = new AssemblyName(type.GetTypeInfo().Assembly.FullName);
                 var factory = services.BuildServiceProvider().GetService<IStringLocalizerFactory>();
-                var localizer = factory.Create("MyDataAnnotations", assemblyName.Name);
+                var localizer = factory.Create("ViewResource", assemblyName.Name);
 
                 o.ModelBindingMessageProvider
-                    .SetAttemptedValueIsInvalidAccessor((x, y) => localizer["InvalidValue"]);
+                    .SetAttemptedValueIsInvalidAccessor((x, y) => localizer["'{0}' is not valid value for '{0}' field", x, y]);
 
                 o.ModelBindingMessageProvider
-                    .SetValueMustBeANumberAccessor((x) => localizer["MustBeNumber"]);
+                    .SetValueMustBeANumberAccessor((x) => localizer["'{0}' must be a number", x]);
             });
         }
     }

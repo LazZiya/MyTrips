@@ -4,7 +4,10 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Localization;
+using MyTrips.Resources;
 using MyTrips.Utilities;
+using System.Reflection;
 
 namespace MyTrips
 {
@@ -35,6 +38,13 @@ namespace MyTrips
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
                 .AddViewLocalization(o=>o.ResourcesPath = "Resources")
                 .AddModelBindingMessagesLocalizer(services)
+                .AddDataAnnotationsLocalization(o=> {
+                    var type = typeof(ViewResource);
+                    var assemblyName = new AssemblyName(type.GetTypeInfo().Assembly.FullName);
+                    var factory = services.BuildServiceProvider().GetService<IStringLocalizerFactory>();
+                    var localizer = factory.Create("ViewResource", assemblyName.Name);
+                    o.DataAnnotationLocalizerProvider = (t, f) => localizer;
+                })
                 .AddRazorPagesOptions(o => {
                     o.Conventions.Add(new CultureTemplateRouteModelConvention());
                 });

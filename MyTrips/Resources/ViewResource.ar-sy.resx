@@ -132,4 +132,34 @@
   <data name="Submit" xml:space="preserve">
     <value>إرسال</value>
   </data>
+  <data name="Destination" xml:space="preserve">
+    <value>الوجهة السياحية</value>
+  </data>
+  <data name="Travel date" xml:space="preserve">
+    <value>تاريخ الرحلة</value>
+  </data>
+  <data name="'{0}' must be at least {1} and maximum {2} characters" xml:space="preserve">
+    <value>يجب أن يكون حقل الـ {0} أقل من {1} و أكثر من {2} حرف</value>
+  </data>
+  <data name="'{0}' must be between [{1} - {2}]" xml:space="preserve">
+    <value>يجب أن يكون '{0}' ما بين [{1} - {2}]</value>
+  </data>
+  <data name="Please enter numbers only" xml:space="preserve">
+    <value>يرجى دخول أرقام فقط في هذا الحقل</value>
+  </data>
+  <data name="The provided value is invalid" xml:space="preserve">
+    <value>المعلومات في هذا الحقل غير مقبولة</value>
+  </data>
+  <data name="Ticket price" xml:space="preserve">
+    <value>سعر البطاقة</value>
+  </data>
+  <data name="Please enter value for {0}" xml:space="preserve">
+    <value>يرجى إدخال معلومات الحقل {0}</value>
+  </data>
+  <data name="'{0}' is not valid value for '{1}' field" xml:space="preserve">
+    <value>'{0}' غير مقبولة للحقل '{1}'</value>
+  </data>
+  <data name="'{0}' must be a number" xml:space="preserve">
+    <value>يجب أن يكون '{0}' رقما</value>
+  </data>
 </root>

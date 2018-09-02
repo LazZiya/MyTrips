@@ -132,4 +132,34 @@
   <data name="Submit" xml:space="preserve">
     <value>ارسال</value>
   </data>
+  <data name="Destination" xml:space="preserve">
+    <value>مقصد</value>
+  </data>
+  <data name="Travel date" xml:space="preserve">
+    <value>تاریخ سفر</value>
+  </data>
+  <data name="'{0}' must be at least {1} and maximum {2} characters" xml:space="preserve">
+    <value>{0} باید حداقل {1} و حداکثر {2} کاراکتر باشد</value>
+  </data>
+  <data name="'{0}' must be between [{1} - {2}]" xml:space="preserve">
+    <value>'{0}' باید بین [{1} - {2}] باشد</value>
+  </data>
+  <data name="Please enter numbers only" xml:space="preserve">
+    <value>لطفا فقط اعداد را وارد کنید</value>
+  </data>
+  <data name="The provided value is invalid" xml:space="preserve">
+    <value>مقدار ارائه شده نامعتبر است</value>
+  </data>
+  <data name="Ticket price" xml:space="preserve">
+    <value>قیمت بلیط</value>
+  </data>
+  <data name="Please enter value for {0}" xml:space="preserve">
+    <value>لطفا برای {0} مقدار را وارد کنید</value>
+  </data>
+  <data name="'{0}' is not valid value for '{1}' field" xml:space="preserve">
+    <value>'{0}' مقدار معتبر برای '{1}' فیلد نیست</value>
+  </data>
+  <data name="'{0}' must be a number" xml:space="preserve">
+    <value>'{0}' باید یک عدد باشد</value>
+  </data>
 </root>

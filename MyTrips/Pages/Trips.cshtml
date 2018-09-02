@@ -71,13 +71,13 @@
             </tr>
             <tr>
                 <td>Text Direction</td>
-                <td>: @(cultureInfo.TextInfo.IsRightToLeft?"RTL":"LTR")</td>
+                <td>: @(cultureInfo.TextInfo.IsRightToLeft ? "RTL" : "LTR")</td>
             </tr>
         </table>
     </div>
 </div>
 
 
-@section Scripts{ 
+@section Scripts{
     <partial name="_ValidationScriptsPartial" />
 }

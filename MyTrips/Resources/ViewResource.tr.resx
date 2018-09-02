@@ -132,4 +132,34 @@
   <data name="Submit" xml:space="preserve">
     <value>Gönder</value>
   </data>
+  <data name="Destination" xml:space="preserve">
+    <value>Gidilecek yer</value>
+  </data>
+  <data name="Travel date" xml:space="preserve">
+    <value>Gezi tarihi</value>
+  </data>
+  <data name="'{0}' must be at least {1} and maximum {2} characters" xml:space="preserve">
+    <value>'{0}' alanı {1}' karakterden az ve '{2}' karakterden dazla olmalı.</value>
+  </data>
+  <data name="'{0}' must be between [{1} - {2}]" xml:space="preserve">
+    <value>'{0}' alanı [{1} - {2}] arasında olmalı</value>
+  </data>
+  <data name="Please enter numbers only" xml:space="preserve">
+    <value>Lütfen sadece rakam girin</value>
+  </data>
+  <data name="The provided value is invalid" xml:space="preserve">
+    <value>Bu alanın değeri geçersiz</value>
+  </data>
+  <data name="Ticket price" xml:space="preserve">
+    <value>Bilet fiyatı</value>
+  </data>
+  <data name="Please enter value for {0}" xml:space="preserve">
+    <value>'{0}' alanı için bir değer girmelisiniz</value>
+  </data>
+  <data name="'{0}' is not valid value for '{1}' field" xml:space="preserve">
+    <value>'{0}' değeri '{1}' alanı için geçerli değil.</value>
+  </data>
+  <data name="'{0}' must be a number" xml:space="preserve">
+    <value>'{0}' alanı rakam olmalı.</value>
+  </data>
 </root>

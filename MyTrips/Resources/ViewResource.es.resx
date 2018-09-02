@@ -132,4 +132,34 @@
   <data name="Submit" xml:space="preserve">
     <value>Enviar</value>
   </data>
+  <data name="'{0}' must be a number" xml:space="preserve">
+    <value>'{0}' debe ser un número</value>
+  </data>
+  <data name="'{0}' is not valid value for '{1}' field" xml:space="preserve">
+    <value>'{0}' no es un valor válido para el campo '{1}'</value>
+  </data>
+  <data name="Please enter value for {0}" xml:space="preserve">
+    <value>Ingrese el valor de {0}</value>
+  </data>
+  <data name="Ticket price" xml:space="preserve">
+    <value>Precio del boleto</value>
+  </data>
+  <data name="The provided value is invalid" xml:space="preserve">
+    <value>El valor proporcionado no es válido</value>
+  </data>
+  <data name="Please enter numbers only" xml:space="preserve">
+    <value>Por favor solo inserte numeros</value>
+  </data>
+  <data name="'{0}' must be between [{1} - {2}]" xml:space="preserve">
+    <value>'{0}' debe estar entre [{1} - {2}]</value>
+  </data>
+  <data name="'{0}' must be at least {1} and maximum {2} characters" xml:space="preserve">
+    <value>'{0}' debe tener al menos {1} y un máximo de {2} caracteres</value>
+  </data>
+  <data name="Travel date" xml:space="preserve">
+    <value>Fecha de viaje</value>
+  </data>
+  <data name="Destination" xml:space="preserve">
+    <value>Destino</value>
+  </data>
 </root>
