@@ -1,0 +1,41 @@
+﻿@page
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer _loc
+@model MyTrips.Pages.AnotherPageModel
+
+@{
+    ViewData["Title"] = _loc["This is a sample title"];
+}
+
+<h2>@ViewData["Title"]</h2>
+
+
+@_loc["Please fill the form"]
+<form>
+    <div asp-validation-summary="All" class="alert-danger"></div>
+    <label asp-for="SampleTitle"></label>
+    <input asp-for="SampleTitle" />
+    <button type="submit">@_loc["Submit"]</button>
+</form>
+
+<br />
+<p>
+    NOTICE: This page uses view specific resource files for localization.<br />
+    In order to activate DataAnnotation localization based on view specific resource files :
+    <ul>
+        <li>
+            goto startup.cs
+        </li>
+        <li>
+            comment Option A
+        </li>
+        <li>
+            uncommect Option B
+        </li>
+    </ul>
+
+</p>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}

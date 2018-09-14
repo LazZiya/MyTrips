@@ -38,6 +38,8 @@ namespace MyTrips
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
                 .AddViewLocalization(o=>o.ResourcesPath = "Resources")
                 .AddModelBindingMessagesLocalizer(services)
+                
+                // Option A: use this for localization with shared resource
                 .AddDataAnnotationsLocalization(o=> {
                     var type = typeof(ViewResource);
                     var assemblyName = new AssemblyName(type.GetTypeInfo().Assembly.FullName);
@@ -45,6 +47,9 @@ namespace MyTrips
                     var localizer = factory.Create("ViewResource", assemblyName.Name);
                     o.DataAnnotationLocalizerProvider = (t, f) => localizer;
                 })
+
+                // Option B: use this for localization by view specific resource
+                //.AddDataAnnotationsLocalization() 
                 .AddRazorPagesOptions(o => {
                     o.Conventions.Add(new CultureTemplateRouteModelConvention());
                 });
