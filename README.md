@@ -39,7 +39,7 @@ These instructions will get you a copy of the project up and running on your loc
 * [cldr-json data](https://github.com/unicode-cldr/cldr-json#cldr-json) - Localized data for all cultures, required for client side valdiation
 
 ## Demo Project :
-* [MyTrips](http://aspnetcore.ziyad.info/en/trips) - http://aspnetcore.ziyad.info/en/trips
+* [MyTrips](http://demo.ziyad.info/en/trips) - http://demo.ziyad.info/en/trips
 
 ## Step by step tutorial:
 * [Developing Multicultural Web Application Using ASP.NET Core 2.1](http://ziyad.info/en/articles/10-Building_Multicultural_Web_Application_AspNet_Core_2_1)
