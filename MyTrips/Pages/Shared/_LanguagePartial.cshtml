@@ -1,9 +1,7 @@
 ﻿@using System.Globalization;
 @using Microsoft.AspNetCore.Builder;
 @using Microsoft.Extensions.Options
-
 @inject IOptions<RequestLocalizationOptions> LocOps
-
 @{
     var requestCulture = CultureInfo.CurrentCulture;
     var supportedCultures = LocOps.Value.SupportedUICultures
@@ -12,8 +10,16 @@
             Value = c.Name,
             Text = $"{c.DisplayName}"
         }).ToList();
-}
 
+    var routeData = new Dictionary<string, string>();
+
+    // capture all route parameters
+    // necessary for "Page Route" opioon
+    foreach (var r in ViewContext.RouteData.Values)
+    {
+        routeData.Add(r.Key, r.Value.ToString());
+    }
+}
 <ul class="nav navbar-nav" id="lang-bar">
     <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -25,9 +31,9 @@
             {
                 if (culture.Value.ToLower() != requestCulture.Name.ToLower())
                 {
+                    routeData["culture"] = culture.Value;
                     <li>
-                        <a
-                           asp-route-culture="@culture.Value"
+                        <a asp-all-route-data="@routeData"
                            asp-route-returnUrl="@(Context.Request.Query["returnUrl"])">
                             @culture.Text
                         </a>

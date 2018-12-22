@@ -1,0 +1,45 @@
+﻿@page
+@model MyTrips.Pages.NumbersModel
+@{
+    ViewData["Title"] = "Numbers";
+}
+
+<h2>None English Numbers</h2>
+
+<p>Here is a sample of numbers input in different cultures, try typing numbers in the below text fields;</p>
+
+<div class="row">
+    <div class="form-group">
+        <label for="arab">Arab</label>
+        <input type="text" id="arab" />
+    </div>
+    <div class="form-group">
+        <label for="farsi">Farsi</label>
+        <input type="text" id="farsi" />
+    </div>
+    <div class="form-group">
+        <label for="beng">Beng</label>
+        <input type="text" id="beng" />
+    </div>
+    <div class="form-group">
+        <label for="knda">Knda</label>
+        <input type="text" id="knda" />
+    </div>
+    <div class="form-group">
+        <label for="deva">Deva</label>
+        <input type="text" id="deva" />
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/js/numbers.js"></script>
+    <script>
+        $(function () {
+            SetNumSystem("arab", "arab");
+            SetNumSystem("farsi", "arabext");
+            SetNumSystem("beng", "beng");
+            SetNumSystem("knda", "knda");
+            SetNumSystem("deva", "deva");
+        });
+    </script>
+}
