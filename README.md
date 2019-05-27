@@ -3,8 +3,8 @@ Sample project for basic multi-cultural web application, built with ASP.NET Core
 
 ## [NEW 27.05.2019]
 I developed a new nuget package named [ExpressLocalization](https://github.com/LazZiya/ExpressLocalization) to simplify localization of Asp.Net Core 2.x web apps to one step.
- - Repository : https://github/LazZiya/ExpressLocalization
- - Sample project (DotNet Core 2.2): https://github/LazZiya/ExpressLocalizationSample
+ - Repository : https://github.com/LazZiya/ExpressLocalization
+ - Sample project (DotNet Core 2.2): https://github.com/LazZiya/ExpressLocalizationSample
  - Project website : http://ziyad.info/en/articles/33-Express_Localization
  
  if you still need to go through localization steps manually continue reading this page :)
